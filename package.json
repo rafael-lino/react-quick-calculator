@@ -1,6 +1,10 @@
 {
   "name": "react-quick-calculator",
-  "homepage": "https://github.com/rafael-lino/react-quick-calculator",
+  "homepage": "https://www.npmjs.com/package/react-quick-calculator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafael-lino/react-quick-calculator"
+  },
   "private": false,
   "version": "1.0.0",
   "type": "module",
