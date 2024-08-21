@@ -2,7 +2,7 @@
   "name": "react-quick-calculator",
   "homepage": "https://github.com/rafael-lino/react-quick-calculator",
   "private": false,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
