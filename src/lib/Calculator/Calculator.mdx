@@ -1,0 +1,19 @@
+import { Meta, ArgTypes, Story } from "@storybook/blocks";
+import * as CalculatorStories from "./Calculator.stories";
+import Calculator from "./Calculator";
+
+<Meta title="Example/Calculator" component={Calculator} />
+
+# Example Component Demo
+
+## Calculator props
+
+<ArgTypes of={Calculator} />
+
+## Description
+
+`Calculator` component provides user basic interface to increment Calculator by one.
+
+## Demo
+
+<Story of={CalculatorStories.ExampleCalculator} />
