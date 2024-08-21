@@ -22,7 +22,7 @@ To get started with React Quick Calculator, clone the repository and install the
 ```bash
 git clone https://github.com/rafael-lino/react-quick-calculator.git
 cd react-quick-calculator
-npm install
+pnpm install
 ```
 
 ## Scripts
