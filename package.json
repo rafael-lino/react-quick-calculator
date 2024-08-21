@@ -32,7 +32,7 @@
     "css-modules",
     "typescript"
   ],
-  "description": "Missing React, typescript NPM library creation template",
+  "description": "Simple calculator component for React",
   "scripts": {
     "dev": "vite",
     "clean:lib": "rm -rf dist",

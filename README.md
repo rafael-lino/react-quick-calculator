@@ -1,53 +1,81 @@
-[![CI](https://github.com/morewings/react-library-template/actions/workflows/merge-jobs.yml/badge.svg)](https://github.com/morewings/react-library-template/actions/workflows/merge-jobs.yml)
-[![Storybook deploy](https://github.com/morewings/react-library-template/actions/workflows/pages.yml/badge.svg)](https://github.com/morewings/react-library-template/actions/workflows/pages.yml)
-[![Use this template](https://img.shields.io/badge/use%20this-template-blue?logo=githu)](https://github.com/morewings/react-library-template/generate)
+# React Quick Calculator
 
-# React Library Template
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue)](https://github.com/rafael-lino/react-quick-calculator)
 
+## Description
 
-[![NPM library Create React App template logo](./design/logo.jpg)](#)
-
-With React Library Template Repository, you can focus on developing your React components and libraries without worrying about the configuration and setup.
-
-Read [full documentation](https://dev.to/morewings/fastest-way-to-create-a-react-library-3mi7).
-
-Visit [Demo Storybook](https://morewings.github.io/react-library-template/).
+**React Quick Calculator** is a simple calculator component specifically designed for React applications.
 
 ## Features
 
-- Supports **Typescript** and **Javascript**.
-- Bundles `commonjs` and `es` module formats.
-- [pnpm](https://pnpm.io/) for blazing fast package management.
-- [Vite](https://vitejs.dev/) for speedy bundling
-- [Husky](https://github.com/typicode/husky) for git hooks.
-- [Eslint](https://eslint.org/) and [stylelint](https://stylelint.io/).
-- [Rollup](https://rollupjs.org/guide/en/) for bundling.
-- [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) for testing.
-- [Storybook](https://storybook.js.org/) for documentation and demo.
-- Optional [Tailwind CSS](https://tailwindcss.com/) support.
+- **Lightweight Component**: Easy to integrate into any React application.
+- **TypeScript Support**: Built with TypeScript for type safety and better maintainability.
+- **Vite for Development**: Fast and efficient development server with Vite.
+- **Testing Integration**: Includes Jest and React Testing Library for comprehensive testing.
+- **Linting**: Ensures code quality with ESLint and Stylelint.
+- **Storybook**: Develop and document UI components in isolation.
 
-## Quickstart
+## Installation
 
-### Prerequisites
+To get started with React Quick Calculator, clone the repository and install the dependencies:
 
-1. Install **Node** >= 20.x.
-2. Install **pnpm**. E.g. `corepack prepare pnpm@latest --activate`.
-
-
-### Installation
-
-Manually clone repo or use `degit`.
-
-```shell script
-# With CSS Modules config
-npx degit github:morewings/react-library-template my-library
-# With Tailwind CSS config
-npx degit github:morewings/react-library-template#tailwind my-library
-cd ./my-library
-pnpm i
+```bash
+git clone https://github.com/rafael-lino/react-quick-calculator.git
+cd react-quick-calculator
+npm install
 ```
 
+## Scripts
 
-## Enable Tailwind CSS
+Here are some useful commands you can run:
 
-You can find all changes at this [PR](https://github.com/morewings/react-library-template/pull/161) and [tailwind](https://github.com/morewings/react-library-template/tree/tailwind) branch.
+- **Development**: Start the development server.
+  ```bash
+  npm run dev
+  ```
+
+- **Build**: Create a production build of the library.
+  ```bash
+  npm run build
+  ```
+
+- **Test**: Run the test suite.
+  ```bash
+  npm test
+  ```
+
+- **Preview Build**: Preview your production build.
+  ```bash
+  npm run preview
+  ```
+
+- **Start Storybook**: Run Storybook for component development.
+  ```bash
+  npm run start:docs
+  ```
+
+## Keywords
+
+- React
+- TypeScript
+- Vite
+- ESLint
+- Testing Library
+- Storybook
+
+## Peer Dependencies
+
+This library requires the following peer dependencies:
+
+- `react` (>=18.2.0)
+- `react-dom` (>=18.2.0)
+
+## Contributing
+
+Contributions are welcome! Feel free to submit a pull request or open an issue for any enhancements or bugs you encounter.
+
+## License
+
+This project is licensed under the MIT License.
+
+For more information, visit the [GitHub repository](https://github.com/rafael-lino/react-quick-calculator).
