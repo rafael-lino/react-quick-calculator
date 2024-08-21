@@ -3,10 +3,10 @@
   "homepage": "https://www.npmjs.com/package/react-quick-calculator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rafael-lino/react-quick-calculator"
+    "url": "git+https://github.com/rafael-lino/react-quick-calculator.git"
   },
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
