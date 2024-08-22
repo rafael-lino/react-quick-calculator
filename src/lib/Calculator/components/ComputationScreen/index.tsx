@@ -5,7 +5,7 @@ type ComputationScreenProps = {
 };
 
 const ComputationScreen: FC<ComputationScreenProps> = ({children}) => (
-    <div className="quick-calculator_computation-screen">{children}</div>
+    <div className="h-1/2 text-3xl flex justify-end items-center">{children}</div>
 );
 
 export default ComputationScreen;

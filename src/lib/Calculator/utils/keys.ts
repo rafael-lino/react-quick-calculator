@@ -23,9 +23,9 @@ export const LAYOUT_KEYS = [
     {
         id: 1,
         row: [
-            {id: 'delete', label: 'C'},
-            {id: 'backspace', label: '←'},
-            {id: 'percentage', label: '%'},
+            {id: 'delete', label: 'C', type: 'operator'},
+            {id: 'backspace', label: '←', type: 'operator'},
+            {id: 'percentage', label: '%', type: 'operator'},
             {id: 'divide', label: '/', type: 'operator'},
         ],
     },

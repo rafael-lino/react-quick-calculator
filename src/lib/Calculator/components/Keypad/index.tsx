@@ -10,7 +10,7 @@ type KeypadProps = {
 
 const Keypad: FC<KeypadProps> = ({onClick}) => {
     return (
-        <section className="quick-calculator_keypad">
+        <section className="h-[55vh] w-full">
             {LAYOUT_KEYS.map(({row, id}) => (
                 <KeypadRow key={id}>
                     {row.map(item => (
