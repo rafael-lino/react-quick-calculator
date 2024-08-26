@@ -25,10 +25,15 @@ jobs:
         run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_ENV
         id: nvm
 
+      - name: Read .npmrc
+        run: echo "NPMRC=$(cat .npmrc)" >> $GITHUB_ENV
+        id: npm
+
       - name: Use Node.js ${{ env.NVMRC }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NVMRC }}
+          registry-url: ${{ env.NPMRC }}
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
