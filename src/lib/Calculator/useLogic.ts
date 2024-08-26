@@ -50,9 +50,9 @@ export function useLogic() {
     );
 
     useEffect(() => {
-        document.addEventListener('keydown', onKeyPress);
+        document.body.addEventListener('keydown', onKeyPress);
 
-        return () => document.removeEventListener('keydown', onKeyPress);
+        return () => document.body.removeEventListener('keydown', onKeyPress);
     }, [onKeyPress]);
     return [
         {

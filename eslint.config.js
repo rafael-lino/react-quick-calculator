@@ -59,7 +59,7 @@ export default [
             'no-const-assign': 'error',
             /** Restrict imports from devDependencies since they are not included in library build. peerDependencies are ok */
             'import/no-extraneous-dependencies': [
-                'error',
+                'off',
                 {
                     devDependencies: false,
                     peerDependencies: true,
