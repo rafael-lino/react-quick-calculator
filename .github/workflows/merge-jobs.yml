@@ -29,7 +29,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NVMRC }}
-          registry-url: @rcsworks:registry=https://npm.pkg.github.com/
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
