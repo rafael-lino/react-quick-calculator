@@ -6,7 +6,7 @@
     "url": "git+https://github.com/rafael-lino/react-quick-calculator.git"
   },
   "private": false,
-  "version": "2.0.2",
+  "version": "2.0.3",
   "type": "module",
   "files": [
     "dist"
@@ -62,7 +62,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-    
   },
   "devDependencies": {
     "@eslint/compat": "1.1.1",
