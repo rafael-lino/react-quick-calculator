@@ -1,7 +1,7 @@
 import Keypad from './components/Keypad';
 import Screen from './components/Screen';
 import {useLogic} from './useLogic';
-
+import '../index.css';
 const Calculator = () => {
     const [{equation, result}, onClick] = useLogic();
 
