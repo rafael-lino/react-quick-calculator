@@ -1,6 +1,8 @@
 import {useEffect, useState, type FC} from 'react';
 import {twMerge} from 'tailwind-merge';
 
+import {cn} from '../../utils/cn';
+
 type ResultScreenProps = {
     children: React.ReactNode;
     className?: string;
@@ -25,7 +27,13 @@ const ResultScreen: FC<ResultScreenProps> = ({children, className}) => {
     }, [copied]);
     return (
         <div className={twMerge('h-1/2 text-7xl font-semibold flex justify-end items-end', className)}>
-            {copied && <span className="text-sm self-center mx-2 transition-opacity">copied!</span>}
+            <span
+                className={cn(
+                    'text-sm self-center mx-2 cursor-default transition-opacity opacity-0',
+                    copied && 'opacity-100'
+                )}>
+                copied!
+            </span>
             <button onClick={handleCopy}>{children}</button>
         </div>
     );

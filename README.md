@@ -8,12 +8,9 @@
 
 ## Features
 
-- **Lightweight Component**: Easy to integrate into any React application.
-- **TypeScript Support**: Built with TypeScript for type safety and better maintainability.
-- **Vite for Development**: Fast and efficient development server with Vite.
-- **Testing Integration**: Includes Jest and React Testing Library for comprehensive testing.
-- **Linting**: Ensures code quality with ESLint and Stylelint.
-- **Storybook**: Develop and document UI components in isolation.
+- **Float Component**: Press `Alt + k` to show calculator.
+- **Numpad actions**: Press Numpad numbers to use.
+- **Styled**: Change any style that you want (using tailwindcss)
 
 ## Installation
 

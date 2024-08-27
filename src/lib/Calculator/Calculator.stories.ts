@@ -16,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const ExampleCalculator: Story = {
     args: {
-        initialValue: 0,
+        initOpened: true,
     },
 };

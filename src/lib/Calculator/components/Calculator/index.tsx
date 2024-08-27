@@ -1,4 +1,4 @@
-import type {FC} from 'react';
+import {type FC} from 'react';
 import {twMerge} from 'tailwind-merge';
 
 import {useLogic} from '../../useLogic';
