@@ -6,7 +6,7 @@
     "url": "git+https://github.com/rafael-lino/react-quick-calculator.git"
   },
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "files": [
     "dist"
