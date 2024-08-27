@@ -25,10 +25,6 @@ jobs:
         run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_ENV
         id: nvm
 
-      - name: Read .npmrc
-        run: echo "NPMRC=$(cat .npmrc)" >> $GITHUB_ENV
-        id: npm
-
       - name: Use Node.js ${{ env.NVMRC }}
         uses: actions/setup-node@v4
         with:
@@ -60,3 +56,4 @@ jobs:
         uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          registry: "https://npm.pkg.github.com"
