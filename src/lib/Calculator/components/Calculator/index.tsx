@@ -25,7 +25,7 @@ export const Calculator: FC<CalculatorProps> = ({
 }) => {
     const [{equation, result}, onClick] = useLogic();
     return (
-        <main className={twMerge('h-full max-w-[20vw] w-full shadow-lg bg-white', className)}>
+        <main className={twMerge('h-full max-w-[20vw] w-full shadow-lg bg-white absolute', className)}>
             <Screen
                 equation={equation}
                 result={result}
