@@ -33,7 +33,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NVMRC }}
-          registry-url: ${{ env.NPMRC }}
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
