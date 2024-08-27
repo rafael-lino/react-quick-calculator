@@ -23,12 +23,13 @@ export const Calculator: FC<CalculatorProps> = ({
     computationScreenClassName,
     buttonClassName,
 }) => {
-    const [{equation, result}, onClick] = useLogic();
+    const [{equation, result, isError}, onClick] = useLogic();
     return (
         <main className={twMerge('h-full max-w-[20vw] w-full shadow-lg bg-white absolute', className)}>
             <Screen
                 equation={equation}
                 result={result}
+                error={isError}
                 className={screenClassName}
                 resultScreenClassName={resultScreenClassName}
                 computationScreenClassName={computationScreenClassName}
