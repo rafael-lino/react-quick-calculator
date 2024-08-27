@@ -29,8 +29,8 @@ const ResultScreen: FC<ResultScreenProps> = ({children, className}) => {
         <div className={twMerge('h-1/2 text-7xl font-semibold flex justify-end items-end', className)}>
             <span
                 className={cn(
-                    'text-sm self-center mx-2 cursor-default transition-opacity opacity-0',
-                    copied && 'opacity-100'
+                    'text-sm self-center mx-2 cursor-default transition-opacity',
+                    copied ? 'opacity-100' : 'opacity-0'
                 )}>
                 copied!
             </span>
