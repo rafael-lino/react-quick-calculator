@@ -8,7 +8,7 @@
 
 ## Features
 
-- **Float Component**: Press `Alt + k` to show calculator.
+- **Float Component**: Press `Alt + c` to show calculator.
 - **Numpad actions**: Press Numpad numbers to use.
 - **Styled**: Change any style that you want (using tailwindcss)
 

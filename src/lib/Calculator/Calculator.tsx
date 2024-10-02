@@ -30,8 +30,11 @@ function DraggableCalculator({initOpened = false, ...props}: Readonly<Calculator
     const [opened, setOpened] = useState(initOpened);
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.altKey && event.key === 'k') {
+            if (event.altKey && event.key === 'c') {
                 setOpened(prev => !prev);
+            }
+            if (event.key === 'Escape') {
+                setOpened(false);
             }
         };
         document.body.addEventListener('keydown', handleKeyDown);
