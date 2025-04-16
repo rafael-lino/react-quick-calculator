@@ -14,10 +14,11 @@ export default defineConfig({
     plugins: [react(), dts({rollupTypes: true})],
     build: {
         sourcemap: true,
+        copyPublicDir: false,
         lib: {
             // Could also be a dictionary or array of multiple entry points
-            entry: resolve(__dirname, 'src/lib/index.ts'),
-            name: 'Library name',
+            entry: resolve(__dirname, './src/lib/index.ts'),
+            name: 'react-quick-calculator',
             // the proper extensions will be added
             fileName: 'index',
         },
