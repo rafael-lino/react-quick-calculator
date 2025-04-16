@@ -21,6 +21,7 @@ export default defineConfig({
             name: 'react-quick-calculator',
             // the proper extensions will be added
             fileName: 'index',
+            cssFileName: 'style',
         },
         rollupOptions: {
             // make sure to externalize deps that shouldn't be bundled
@@ -31,6 +32,9 @@ export default defineConfig({
                 // for externalized deps
                 globals: {
                     react: 'React',
+                    'react/jsx-runtime': 'jsxRuntime',
+                    'react-draggable': 'react-draggable',
+                    mathjs: 'mathjs',
                 },
             },
         },
