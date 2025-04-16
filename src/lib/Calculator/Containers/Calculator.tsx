@@ -6,7 +6,7 @@ import Display from '../Components/Display';
 import Controls from './Controls';
 import {useCopyToClipboard} from '../utils/useCopyToClipboard';
 
-const App: React.FC<{top?: number; left?: number}> = ({top, left}) => {
+const App: React.FC = () => {
     const [calculation, setCalculation] = useState<string[]>([]);
     const [sum, setSum] = useState<number>(0);
     const {copy, copied} = useCopyToClipboard();
@@ -20,7 +20,7 @@ const App: React.FC<{top?: number; left?: number}> = ({top, left}) => {
     };
 
     return (
-        <div className="qc-calculator" style={{top, left}}>
+        <div className="qc-calculator">
             <Display calculation={calculation} sum={sum} copied={copied} onCopy={copy} />
             <Controls sum={sum} calculation={calculation} triggerSum={computeSum} triggerCalculation={calculate} />
         </div>

@@ -24,15 +24,10 @@ $results-font-size: 52px;
 
 
 .qc-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+  position: absolute;
 }
 
 .qc-calculator {
-  position: absolute;
   width: 20rem;
   height: 30rem;
   border-radius: 0.75rem;
