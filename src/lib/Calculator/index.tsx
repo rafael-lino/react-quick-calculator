@@ -10,6 +10,7 @@ type CalculatorProps = {
     initOpened?: boolean;
     x?: number;
     y?: number;
+    className?: string;
 };
 /**
  * @property {boolean} [initOpened=false] - Whether the calculator should be opened by default
@@ -17,7 +18,7 @@ type CalculatorProps = {
  * @property {number} [y=undefined] - The left position of the calculator
  * @returns JSX.Element
  */
-function DraggableCalculator({initOpened = false, x, y}: Readonly<CalculatorProps>) {
+function DraggableCalculator({initOpened = false, x, y, className}: Readonly<CalculatorProps>) {
     const nodeRef = useRef(null);
     const opened = useToggleCalculator(initOpened);
     const bounds = useBounds();
@@ -28,7 +29,7 @@ function DraggableCalculator({initOpened = false, x, y}: Readonly<CalculatorProp
             defaultClassNameDragging="cursor-grabbing"
             defaultPosition={{x: x ?? 0, y: y ?? 0}}
             bounds={bounds}
-            defaultClassName="qc-container">
+            defaultClassName={`qc-container ${className ?? ''}`}>
             <div ref={nodeRef}>{opened ? <Calculator /> : null}</div>
         </Draggable>
     );
