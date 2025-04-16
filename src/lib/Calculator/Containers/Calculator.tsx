@@ -1,11 +1,12 @@
+import Mexp from 'math-expression-evaluator';
 import type React from 'react';
 import {useState} from 'react';
-import {evaluate} from 'mathjs';
 
 import Display from '../Components/Display';
-import Controls from './Controls';
 import {useCopyToClipboard} from '../utils/useCopyToClipboard';
+import Controls from './Controls';
 
+const mexp = new Mexp();
 const App: React.FC = () => {
     const [calculation, setCalculation] = useState<string[]>([]);
     const [sum, setSum] = useState<number>(0);
@@ -16,7 +17,7 @@ const App: React.FC = () => {
     };
 
     const computeSum = (calculation: string) => {
-        setSum(calculation.length === 0 ? 0 : evaluate(calculation));
+        setSum(calculation.length === 0 ? 0 : mexp.eval(calculation));
     };
 
     return (

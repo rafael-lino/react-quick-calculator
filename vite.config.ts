@@ -34,7 +34,7 @@ export default defineConfig({
                     react: 'React',
                     'react/jsx-runtime': 'jsxRuntime',
                     'react-draggable': 'react-draggable',
-                    mathjs: 'mathjs',
+                    'math-expression-evaluator': 'math-expression-evaluator',
                 },
             },
         },

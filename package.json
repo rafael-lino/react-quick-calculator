@@ -57,7 +57,7 @@
     "react-dom": ">=18.2.0"
   },
   "dependencies": {
-    "mathjs": "^14.4.0",
+    "math-expression-evaluator": "^2.0.6",
     "react-draggable": "^4.4.6"
   },
   "devDependencies": {
