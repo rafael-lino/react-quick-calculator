@@ -1,67 +1,52 @@
-export const KEY_CODE = new Map([
-    ['Numpad0', '0'],
-    ['Numpad1', '1'],
-    ['Numpad2', '2'],
-    ['Numpad3', '3'],
-    ['Numpad4', '4'],
-    ['Numpad5', '5'],
-    ['Numpad6', '6'],
-    ['Numpad7', '7'],
-    ['Numpad8', '8'],
-    ['Numpad9', '9'],
-    ['NumpadDecimal', '.'],
-    ['NumpadAdd', '+'],
-    ['NumpadSubtract', '-'],
-    ['NumpadMultiply', '*'],
-    ['NumpadDivide', '/'],
-    ['NumpadEnter', '='],
-    ['Backspace', '←'],
-    ['Delete', 'C'],
-]);
+export function IsNumberOrAllowedKey(key: string): boolean {
+    return !isNaN(Number(key)) || ALLOWED_KEYS.includes(key);
+}
+export const ALLOWED_KEYS = ['Enter', 'Backspace', 'Delete', '=', '-', '+', '*', '/', '%', '.'];
 
 export const LAYOUT_KEYS = [
     {
-        id: 1,
-        row: [
-            {id: 'delete', label: 'C', type: 'operator'},
-            {id: 'backspace', label: '←', type: 'operator'},
-            {id: 'percentage', label: '%', type: 'operator'},
-            {id: 'divide', label: '/', type: 'operator'},
+        id: 'first',
+        cols: [
+            {id: 'delete', label: 'C', value: 'Delete', color: 'qc-controls__item--darker'},
+            {id: 'posNeg', label: '+/-', value: 'posNeg', color: 'qc-controls__item--darker'},
+            {id: 'percentage', label: '%', value: '%', color: 'qc-controls__item--darker'},
+            {id: 'divide', label: '/', value: '/', color: 'qc-controls__item--orangeLight'},
         ],
     },
     {
-        id: 2,
-        row: [
-            {id: 'seven', label: '7'},
-            {id: 'eight', label: '8'},
-            {id: 'nine', label: '9'},
-            {id: 'multiply', label: '*', type: 'operator'},
+        id: 'second',
+        cols: [
+            {id: 'seven', label: '7', value: '7'},
+            {id: 'eight', label: '8', value: '8'},
+            {id: 'nine', label: '9', value: '9'},
+            {id: 'multiply', label: '*', value: '*', color: 'qc-controls__item--orangeLight'},
         ],
     },
     {
-        id: 3,
-        row: [
-            {id: 'four', label: '4'},
-            {id: 'five', label: '5'},
-            {id: 'six', label: '6'},
-            {id: 'subtract', label: '-', type: 'operator'},
+        id: 'third',
+        cols: [
+            {id: 'four', label: '4', value: '4'},
+            {id: 'five', label: '5', value: '5'},
+            {id: 'six', label: '6', value: '6'},
+            {id: 'subtract', label: '-', value: '-', color: 'qc-controls__item--orangeLight'},
         ],
     },
     {
-        id: 4,
-        row: [
-            {id: 'one', label: '1'},
-            {id: 'two', label: '2'},
-            {id: 'three', label: '3'},
-            {id: 'plus', label: '+', type: 'operator'},
+        id: 'fourth',
+        cols: [
+            {id: 'three', label: '3', value: '3'},
+            {id: 'two', label: '2', value: '2'},
+            {id: 'one', label: '1', value: '1'},
+            {id: 'plus', label: '+', value: '+', color: 'qc-controls__item--orangeLight'},
         ],
     },
     {
-        id: 5,
-        row: [
-            {id: 'zero', label: '0'},
-            {id: 'dot', label: '.'},
-            {id: 'equal', label: '=', type: 'large'},
+        id: 'fifth',
+        cols: [
+            {id: 'zero', label: '0', value: '0'},
+            {id: 'dot', label: '.', value: '.'},
+            {id: 'backspace', label: '←', value: 'Backspace'},
+            {id: 'equal', label: '=', value: '=', color: 'qc-controls__item--orangeMedium'},
         ],
     },
 ];

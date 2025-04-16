@@ -11,13 +11,14 @@ export default defineConfig({
     resolve: {
         alias: hq.get('rollup'),
     },
-    plugins: [react(), dts({rollupTypes: true, exclude: ['**/*.stories.(ts|tsx)']})],
+    plugins: [react(), dts({rollupTypes: true})],
     build: {
         sourcemap: true,
+        copyPublicDir: false,
         lib: {
             // Could also be a dictionary or array of multiple entry points
-            entry: resolve(__dirname, 'src/lib/index.ts'),
-            name: 'Library name',
+            entry: resolve(__dirname, './src/lib/index.ts'),
+            name: 'react-quick-calculator',
             // the proper extensions will be added
             fileName: 'index',
         },
@@ -30,6 +31,9 @@ export default defineConfig({
                 // for externalized deps
                 globals: {
                     react: 'React',
+                    mathjs: 'mathjs',
+                    'react/jsx-runtime': 'jsxRuntime',
+                    'react-draggable': 'reactDraggable',
                 },
             },
         },

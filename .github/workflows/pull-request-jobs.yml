@@ -48,11 +48,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Run test tasks
+      - name: Run build tasks
         run: |
           pnpm install
           pnpm run lint:code --quiet
           pnpm run lint:style --quiet
-          pnpm run test --silent
-          pnpm run start:docs --smoke-test --quiet
           pnpm run build

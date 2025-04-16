@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 
-import {Calculator} from '@/lib';
 import './index.css';
+import {Calculator} from '@/lib';
 
 const App: FC = () => {
     return (

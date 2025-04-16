@@ -1,0 +1,114 @@
+@use "sass:color";
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300);
+
+@mixin calculator-shadow() {
+  -webkit-box-shadow: 0px 20px 120px -20px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 20px 120px -20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 20px 120px -20px rgba(0, 0, 0, 0.7);
+}
+
+
+$font-family: "Quicksand", sans-serif;
+
+$bg-color-red: #ff5f6d;
+$bg-color-orange: #ffc371;
+$display-color: #333a4d;
+$transparent-white: rgba(255, 255, 255, 0.6);
+$light-grey: #eee;
+$medium-grey: #ccc;
+$light-orange: #fea170;
+$medium-orange: #f78d6c;
+
+$border-radius: 0.75rem;
+$results-font-size: 52px;
+
+
+.qc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.qc-calculator {
+  width: 20rem;
+  height: 30rem;
+  border-radius: 0.75rem;
+  background: $light-grey;
+  @include calculator-shadow();
+  .qc-display {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    overflow: hidden;
+    height: calc(30% + 1px);
+    width: 100%;
+    background: $display-color;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    &__current,
+    &__result {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+      padding: 0 10px;
+    }
+    &__current {
+      color: $transparent-white;
+    }
+    &__result {
+      font-size: $results-font-size;
+      color: $light-grey;
+    }
+    &__label {
+      font-size: 10px;
+      color: $transparent-white;
+      margin-inline: 10px;
+    }
+    &__number {
+      cursor: pointer;
+    }
+  }
+  .qc-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    height: 70%;
+    &__item {
+      font: 400 20px $font-family;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      &:hover {
+        background: color.adjust($light-grey, $lightness: -10%);
+      }
+      &--darker {
+        background: $medium-grey;
+      }
+      &--orangeLight {
+        background: $light-orange;
+        &:hover {
+          background: color.adjust($light-orange, $lightness: -5%);
+        }
+      }
+      &--orangeMedium {
+        background: $medium-orange;
+        &:hover {
+          background: color.adjust($medium-orange, $lightness: -5%);
+        }
+      }
+      &:nth-last-child(1) {
+        border-bottom-right-radius: $border-radius;
+      }
+      &:nth-last-child(4) {
+        border-bottom-left-radius: $border-radius;
+      }
+    }
+  }
+}
