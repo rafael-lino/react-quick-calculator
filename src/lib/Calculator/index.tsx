@@ -6,12 +6,16 @@ import Calculator from './Containers/Calculator';
 
 type CalculatorProps = {
     initOpened?: boolean;
+    top?: number;
+    left?: number;
 };
 /**
  * @property {boolean} [initOpened=false] - Whether the calculator should be opened by default
+ * @property {number} [top=undefined] - The top position of the calculator
+ * @property {number} [left=undefined] - The left position of the calculator
  * @returns JSX.Element
  */
-function DraggableCalculator({initOpened = false}: Readonly<CalculatorProps>) {
+function DraggableCalculator({initOpened = false, ...props}: Readonly<CalculatorProps>) {
     const nodeRef = useRef(null);
     const [opened, setOpened] = useState(initOpened);
     useEffect(() => {
@@ -30,7 +34,7 @@ function DraggableCalculator({initOpened = false}: Readonly<CalculatorProps>) {
 
     return (
         <Draggable nodeRef={nodeRef} defaultClassNameDragging="cursor-grabbing">
-            <div ref={nodeRef}>{opened ? <Calculator /> : null}</div>
+            <div ref={nodeRef}>{opened ? <Calculator {...props} /> : null}</div>
         </Draggable>
     );
 }
