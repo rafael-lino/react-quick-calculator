@@ -31,9 +31,6 @@ export default defineConfig({
                 // for externalized deps
                 globals: {
                     react: 'React',
-                    mathjs: 'mathjs',
-                    'react/jsx-runtime': 'jsxRuntime',
-                    'react-draggable': 'reactDraggable',
                 },
             },
         },
