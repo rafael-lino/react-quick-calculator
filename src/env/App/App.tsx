@@ -5,7 +5,7 @@ import {Calculator} from '@/lib';
 
 const App: FC = () => {
     return (
-        <div style={{width: '100vh'}}>
+        <div style={{width: '80vw', height: '80vh'}}>
             <Calculator />
         </div>
     );

@@ -29,10 +29,10 @@ $results-font-size: 52px;
   align-items: center;
   height: 100vh;
   width: 100%;
-  position: absolute;
 }
 
 .qc-calculator {
+  position: absolute;
   width: 20rem;
   height: 30rem;
   border-radius: 0.75rem;
@@ -63,6 +63,8 @@ $results-font-size: 52px;
     &__result {
       font-size: $results-font-size;
       color: $light-grey;
+      max-width: 279px;
+      padding: 0 20px;
     }
     &__label {
       font-size: 10px;
@@ -71,6 +73,10 @@ $results-font-size: 52px;
     }
     &__number {
       cursor: pointer;
+      width: 100%;
+      text-overflow: clip;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
   .qc-controls {

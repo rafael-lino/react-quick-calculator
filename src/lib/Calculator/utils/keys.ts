@@ -3,6 +3,8 @@ export function IsNumberOrAllowedKey(key: string): boolean {
 }
 export const ALLOWED_KEYS = ['Enter', 'Backspace', 'Delete', '=', '-', '+', '*', '/', '%', '.'];
 
+export const operators = ['+', '-', '*', '/'];
+
 export const LAYOUT_KEYS = [
     {
         id: 'first',

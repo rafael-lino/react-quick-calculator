@@ -1,25 +1,25 @@
 import type React from 'react';
-import {Fragment, useState} from 'react';
+import {Fragment} from 'react';
 
 import Button from '../Components/Button';
 import {useKeyPress} from '../utils/useKeyPress';
-import {LAYOUT_KEYS} from '../utils/keys';
+import {LAYOUT_KEYS, operators} from '../utils/keys';
 
 type ControlsProps = {
+    sum: number;
+    calculation: string[];
     triggerCalculation: (calculation: string[]) => void;
     triggerSum: (calculation: string) => void;
 };
 
-const Controls: React.FC<ControlsProps> = ({triggerCalculation, triggerSum}) => {
-    const [calculation, setCalculation] = useState<string[]>([]);
-
+const Controls: React.FC<ControlsProps> = ({sum, calculation, triggerCalculation, triggerSum}) => {
     const handleAction = (value: string) => {
         switch (value) {
-            case 'Delete':
-                setCalculation([]);
+            case 'Delete': {
                 triggerCalculation([]);
                 triggerSum('');
                 break;
+            }
 
             case '=':
             case 'Enter': {
@@ -28,37 +28,35 @@ const Controls: React.FC<ControlsProps> = ({triggerCalculation, triggerSum}) => 
                 }
                 const result = calculation.join('');
                 triggerSum(result);
-                setCalculation([]);
-                triggerCalculation([]);
+                triggerCalculation([result]);
                 break;
             }
 
             case 'posNeg': {
                 const posNeg = [-1 * Number(calculation.join(''))];
-                setCalculation(posNeg.map(String));
                 triggerCalculation(posNeg.map(String));
                 break;
             }
 
             case '%': {
                 const percentage = [Number(calculation.join('')) * 0.01];
-                setCalculation(percentage.map(String));
                 triggerCalculation(percentage.map(String));
                 break;
             }
             case 'Backspace': {
                 const removeLast = [...calculation];
                 removeLast.pop();
-                setCalculation(removeLast);
                 triggerCalculation(removeLast);
                 break;
             }
 
             default:
                 if (isNaN(Number(value)) && isNaN(Number(calculation[calculation.length - 1]))) {
+                    if (operators.includes(value)) {
+                        triggerCalculation([sum.toString(), value]);
+                    }
                     break;
                 }
-                setCalculation([...calculation, value]);
                 triggerCalculation([...calculation, value]);
                 break;
         }

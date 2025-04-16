@@ -20,11 +20,9 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="qc-container">
-            <div className="qc-calculator">
-                <Display calculation={calculation} sum={sum} copied={copied} onCopy={copy} />
-                <Controls triggerSum={computeSum} triggerCalculation={calculate} />
-            </div>
+        <div className="qc-calculator">
+            <Display calculation={calculation} sum={sum} copied={copied} onCopy={copy} />
+            <Controls sum={sum} calculation={calculation} triggerSum={computeSum} triggerCalculation={calculate} />
         </div>
     );
 };

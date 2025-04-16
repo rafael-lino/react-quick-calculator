@@ -12,9 +12,11 @@ const Display = ({
     return (
         <div className="qc-display">
             <div className="qc-display__current">{calculation}</div>
-            <div role="button" className="qc-display__result" onClick={() => onCopy(sum)} tabIndex={0}>
+            <div className="qc-display__result">
                 {copied ? <span className="qc-display__label">copied!</span> : null}
-                <span className="qc-display__number">{sum}</span>
+                <span role="button" className="qc-display__number" onClick={() => onCopy(sum)} tabIndex={0}>
+                    {sum}
+                </span>
             </div>
         </div>
     );
