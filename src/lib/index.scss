@@ -71,6 +71,9 @@ $results-font-size: 52px;
       text-overflow: clip;
       white-space: nowrap;
       overflow: hidden;
+      &:focus-visible {
+        outline: none;
+      }
     }
   }
   .qc-controls {

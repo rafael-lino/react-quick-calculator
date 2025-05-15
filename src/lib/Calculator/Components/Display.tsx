@@ -14,7 +14,7 @@ const Display = ({
             <div className="qc-display__current">{calculation}</div>
             <div className="qc-display__result">
                 {copied ? <span className="qc-display__label">copied!</span> : null}
-                <span role="button" className="qc-display__number" onClick={() => onCopy(sum)} tabIndex={0}>
+                <span autoFocus role="button" className="qc-display__number" onClick={() => onCopy(sum)} tabIndex={0}>
                     {sum}
                 </span>
             </div>
