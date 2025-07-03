@@ -159,6 +159,7 @@ export default [
                     ],
                 },
             ],
+            'react/prop-types': ['off'],
         },
     },
     /* Disable `template` directory imports for all files */

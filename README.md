@@ -1,6 +1,6 @@
 # React Quick Calculator
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue)](https://github.com/rafael-lino/react-quick-calculator)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue)](https://github.com/rafaLino/react-quick-calculator)
 
 ## Description
 
@@ -17,7 +17,7 @@
 To get started with React Quick Calculator, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/rafael-lino/react-quick-calculator.git
+git clone https://github.com/rafaLino/react-quick-calculator.git
 cd react-quick-calculator
 pnpm install
 ```
@@ -75,4 +75,4 @@ Contributions are welcome! Feel free to submit a pull request or open an issue f
 
 This project is licensed under the MIT License.
 
-For more information, visit the [GitHub repository](https://github.com/rafael-lino/react-quick-calculator).
+For more information, visit the [GitHub repository](https://github.com/rafaLino/react-quick-calculator).

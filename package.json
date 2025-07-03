@@ -1,9 +1,9 @@
 {
-  "name": "@rafael-lino/react-quick-calculator",
-  "homepage": "https://github.com/rafael-lino/react-quick-calculator",
+  "name": "@rafalino/react-quick-calculator",
+  "homepage": "https://github.com/rafaLino/react-quick-calculator",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafael-lino/react-quick-calculator.git"
+    "url": "git+https://github.com/rafaLino/react-quick-calculator.git"
   },
   "private": false,
   "version": "2.3.3",

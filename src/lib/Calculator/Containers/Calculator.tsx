@@ -1,31 +1,47 @@
 import Mexp from 'math-expression-evaluator';
-import type React from 'react';
-import {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import Display from '../Components/Display';
-import {useCopyToClipboard} from '../utils/useCopyToClipboard';
+import {Calculate} from '../utils/calculate';
+import {useKeyPress} from '../utils/useKeyPress';
 import Controls from './Controls';
 
 const mexp = new Mexp();
-const App: React.FC = () => {
-    const [calculation, setCalculation] = useState<string[]>([]);
+const Calculator = () => {
+    const [expression, setExpression] = useState<string[]>([]);
     const [sum, setSum] = useState<number>(0);
-    const {copy, copied} = useCopyToClipboard();
+    const calculatorRef = useRef<HTMLDivElement>(null);
 
-    const calculate = (calculation: string[]) => {
-        setCalculation(calculation);
+    const computeExpression = (expression: string[]) => {
+        setExpression(expression);
     };
 
-    const computeSum = (calculation: string) => {
-        setSum(calculation.length === 0 ? 0 : mexp.eval(calculation));
+    const computeSum = (expression: string) => {
+        setSum(expression.length === 0 ? 0 : mexp.eval(expression));
     };
+
+    const handleAction = (command: string) => {
+        Calculate({
+            command,
+            sum,
+            expression,
+            computeExpression,
+            computeSum,
+        });
+    };
+
+    useKeyPress(calculatorRef, handleAction);
+
+    useEffect(() => {
+        calculatorRef.current?.focus();
+    }, []);
 
     return (
-        <div className="qc-calculator">
-            <Display calculation={calculation} sum={sum} copied={copied} onCopy={copy} />
-            <Controls sum={sum} calculation={calculation} triggerSum={computeSum} triggerCalculation={calculate} />
+        <div ref={calculatorRef} tabIndex={0} className="qc-calculator" onClick={() => calculatorRef.current?.focus()}>
+            <Display calculation={expression} sum={sum} />
+            <Controls onAction={handleAction} />
         </div>
     );
 };
 
-export default App;
+export default Calculator;

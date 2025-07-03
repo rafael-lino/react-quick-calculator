@@ -1,22 +1,18 @@
-const Display = ({
-    calculation,
-    sum,
-    copied,
-    onCopy,
-}: {
-    calculation: string[];
-    sum: number;
-    copied: boolean;
-    onCopy: (value: number) => void;
-}) => {
+import {useCopyToClipboard} from '../utils/useCopyToClipboard';
+
+const Display = ({calculation, sum}: {calculation: string[]; sum: number}) => {
+    const {copy, copied} = useCopyToClipboard();
+
+    const handleClick = () => copy(sum);
+
     return (
         <div className="qc-display">
             <div className="qc-display__current">{calculation}</div>
             <div className="qc-display__result">
                 {copied ? <span className="qc-display__label">copied!</span> : null}
-                <span autoFocus role="button" className="qc-display__number" onClick={() => onCopy(sum)} tabIndex={0}>
+                <button tabIndex={-1} className="qc-display__number" onClick={handleClick}>
                     {sum}
-                </span>
+                </button>
             </div>
         </div>
     );
